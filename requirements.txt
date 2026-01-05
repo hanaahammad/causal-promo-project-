@@ -1,0 +1,12 @@
+streamlit
+numpy
+pandas
+scikit-learn
+torch
+matplotlib
+plotly
+onnx<=1.16.1
+onnxruntime<=1.18.0
+onnxscript
+pyvis
+networkx
