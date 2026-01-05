@@ -60,17 +60,27 @@ On the right:
 
 ## 🗂 Project Structure
 causal-promo-project/
+
 │
 ├── app.py                         # Main Streamlit entry point
+
 │
 ├── pages/                         # Multi-page Streamlit application
+
 │   ├── 1_🏠_Introduction.py
+
 │   ├── 2_📊_Synthetic_Dataset.py
+
 │   ├── 3_🧠_Train_Deep_Model.py
+
 │   ├── 4_🎯_ATE_and_CATE_Results.py
+
 │   ├── 5_🔀_Counterfactual_Explorer.py
+
 │   ├── 6_🧭_Causal_DAG_Viewer.py
+
 │   ├── 7_📦_Export_Model_ONNX.py
+
 │   └── 8_🌍_Real_Marketing_Dataset.py
 │
 ├── data/
@@ -81,13 +91,17 @@ causal-promo-project/
 │
 ├── src/
 │   ├── training.py                # Training functions
+
 │   ├── data_generation.py         # Synthetic data creation logic
+
 │   └── utils.py                   # Helper functions
 │
 ├── images/                        # Diagrams & README figures
+
 │   └── causal_vs_correlation_pytorch.png
 │
 ├── requirements.txt
+
 └── README.md
 
 ## ▶️ How to run and use the app
@@ -119,3 +133,4 @@ This project intentionally follows a complete causal-ML workflow:
 4. train a causal deep learning model  
 5. estimate treatment effects  
 6. explore counterfactuals  
+
