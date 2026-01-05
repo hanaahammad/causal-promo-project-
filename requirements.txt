@@ -6,7 +6,8 @@ torch
 matplotlib
 plotly
 onnx<=1.16.1
-onnxruntime<=1.18.0
+onnxruntime
 onnxscript
 pyvis
 networkx
+
