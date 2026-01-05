@@ -57,6 +57,74 @@ On the right:
 - counterfactual estimators  
 
 ➡ all implemented in **deep learning frameworks like PyTorch**
+## 🚀 Live Application
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ygcxqzukqgewjrriwl4uhq.streamlit.app/)
+
+👉 **Open the app here:**  
+https://ygcxqzukqgewjrriwl4uhq.streamlit.app/
+
+## 🧭 Which columns should I choose in the app?
+
+The app asks you to select:
+
+- **Feature columns (X)** – customer characteristics
+- **Treatment column (T)** – whether promotion was applied
+- **Outcome column (Y)** – what we try to measure (spending)
+
+> 💡 Rule of thumb  
+> Features describe the **customer before promotion**.  
+> Treatment is **promotion yes/no**.  
+> Outcome is **what happened after**.
+
+### 📊 Synthetic dataset (recommended for learning)
+
+Select the following:
+
+- 🧩 **Features (X)**  
+  - `income`  
+  - `loyalty`  
+  - `age`
+
+- 💊 **Treatment (T)**  
+  - `treatment`
+
+- 🎯 **Outcome (Y)**  
+  - `spend`
+
+### 🌍 Kaggle Marketing Campaign dataset
+
+Good choices are:
+
+- 🧩 **Features (X)**  
+  - `Income`  
+  - `Kidhome`  
+  - `Teenhome`  
+  - `Recency`  
+  - `MntWines`  
+  - `MntMeatProducts`
+
+- 💊 **Treatment (T)**  
+  - `Response`   (binary 0/1)
+
+- 🎯 **Outcome (Y)**  
+  Recommended:
+  - `TotalSpend` (if available)  
+  or any of:
+  - `MntWines`
+  - `MntMeatProducts`
+
+### short workflow reminder
+1) Page 2 → generate synthetic data
+      or
+   Page 8 → upload Kaggle dataset
+
+2) Page 3 → select columns and train model
+
+3) Page 4 → view ATE & CATE
+
+4) Page 5 → explore counterfactuals
+
 
 ## 🗂 Project Structure
 causal-promo-project/
@@ -133,4 +201,5 @@ This project intentionally follows a complete causal-ML workflow:
 4. train a causal deep learning model  
 5. estimate treatment effects  
 6. explore counterfactuals  
+
 
