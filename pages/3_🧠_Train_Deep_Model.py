@@ -6,6 +6,15 @@ import torch
 import torch.nn as nn
 import streamlit as st
 import matplotlib.pyplot as plt
+# try session_state first
+df = st.session_state.get("train_df")
+
+# fallback: auto-load dataset saved on disk
+import os, pandas as pd
+if df is None and os.path.exists("data/active_dataset.csv"):
+    df = pd.read_csv("data/active_dataset.csv")
+    st.session_state["train_df"] = df
+    st.info("📂 Dataset restored automatically (new session detected).")
 
 st.set_page_config(page_title="Train Deep Causal Model", page_icon="🧠")
 
@@ -204,3 +213,4 @@ if train_button:
     st.pyplot(fig2)
 
     st.info("📌 Model saved in session. You can now go to **Page 4 (ATE/CATE)** or **Page 5 (Counterfactual Explorer)**.")
+
